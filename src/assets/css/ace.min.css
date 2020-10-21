@@ -1310,16 +1310,17 @@ pre.prettyprint {
   transform: scale(1.2);
 }
 
-.navbar {
-  margin: 0;
-  padding-left: 0;
-  padding-right: 0;
-  border-width: 0;
-  border-radius: 0;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  min-height: 45px;
-  background: #438eb9;
+  .navbar {
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+    border-width: 0;
+    border-radius: 0;
+    box-shadow: none;
+    min-height: 45px;
+    border-bottom: 1px solid #dee2e6;
+    background: #ffffff;
+    height: 41px;
 }
 
 .navbar .navbar-text,.navbar .navbar-link {
@@ -1370,16 +1371,16 @@ pre.prettyprint {
 }
 
 .ace-nav>li>a {
-  background-color: #2e6589;
-  color: #FFF;
-  display: block;
-  line-height: inherit;
-  text-align: center;
-  height: 100%;
-  width: auto;
-  min-width: 50px;
-  padding: 0 8px;
-  position: relative;
+  background-color: #ffffff;
+    color: #343a40;
+    display: block;
+    line-height: inherit;
+    text-align: center;
+    height: 98%;
+    width: auto;
+    min-width: 50px;
+    padding: 0 50px;
+    position: relative;
 }
 
 .ace-nav>li>a>.ace-icon {
@@ -1399,8 +1400,8 @@ pre.prettyprint {
 }
 
 .ace-nav>li>a:hover,.ace-nav>li>a:focus,.ace-nav>li.open>a {
-  background-color: #2c5976;
-  color: #FFF;
+  background-color:white;
+  color:black;
 }
 
 .ace-nav>li.blue>a {
@@ -2295,7 +2296,7 @@ pre.prettyprint {
   display: block;
   position: relative;
   float: none;
-  padding: 0;
+  padding: 10px 0px;
   border-style: solid;
   border-width: 0px 1px 1px;
   border-color: #e5e5e5;
@@ -20761,7 +20762,7 @@ input.typeahead.scrollable~.tt-dropdown-menu {
 }
 
 .no-skin .sidebar {
-  background-color: #f2f2f2;
+  background-color: #343a40;;
   border-style: solid;
   border-color: #ccc;
   border-width: 0 1px 0 0;
@@ -20772,12 +20773,12 @@ input.typeahead.scrollable~.tt-dropdown-menu {
 }
 
 .no-skin .nav-list>li {
-  border-color: #e5e5e5;
+  border-color: #707478;
 }
 
 .no-skin .nav-list>li>a {
-  background-color: #f8f8f8;
-  color: #585858;
+  background-color: #343a40;
+    color: #c1c6cf;
 }
 
 .no-skin .nav-list>li>a:focus {
@@ -20786,8 +20787,8 @@ input.typeahead.scrollable~.tt-dropdown-menu {
 }
 
 .no-skin .nav-list>li:hover>a {
-  background-color: #fff;
-  color: #266cad;
+  background-color: #343a40;
+    color: #ffffff;
 }
 
 .no-skin .nav-list>li.open>a {
@@ -20876,8 +20877,8 @@ input.typeahead.scrollable~.tt-dropdown-menu {
 }
 
 .no-skin .sidebar-toggle {
-  background-color: #f3f3f3;
-  border-color: #e0e0e0;
+  background-color: #343a40;
+  border-color: #e0e0e059;
 }
 
 .no-skin .sidebar-toggle>.ace-icon {

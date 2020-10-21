@@ -10,6 +10,7 @@ import {FileUploadModule} from 'primeng/fileupload';
 import { UnauthorizedComponent } from './unauthorized/unauthorized.component';
 import { FileNotFoundComponent } from './file-not-found/file-not-found.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {MultiSelectModule} from 'primeng/multiselect';
 @NgModule({
   declarations: [UnauthorizedComponent, FileNotFoundComponent],
   imports: [
@@ -22,6 +23,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     DropdownModule,
     FileUploadModule,
     ReactiveFormsModule,
+    MultiSelectModule,
     NgbModule
   ],
   exports: [

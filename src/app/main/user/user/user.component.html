@@ -1,24 +1,21 @@
-<div class="breadcrumbs" id="breadcrumbs">
+<div class="breadcrumbs" id="breadcrumbs" style="width: 1180px;background: white;border: none;height: 70px;">
     <ul class="breadcrumb">
-      <li>
-        <i class="ace-icon fa fa-home home-icon"></i>
-        <a href="#">Trang chủ</a>
-      </li>
-      <li class="active">Quản lý người dùng</li>
+      <li class="active" style="padding-left: 15px;padding-top: 30px;font-size: 27px;font-weight: bold;">Quản lý người dùng</li>
     </ul>
     <div class="nav-search">
       <p class="pull-right no-margin">
         <a (click)="createModal()" class="btn btn-success btn-xs">
-          <i class="fa fa-plus"></i>&nbsp;Thêm
+          <i class="fa fa-plus"></i>&nbsp;Thêm người dùng
         </a>
       </p>
     </div>
   </div>
-  <div class="row">
+  <div class="row" style="margin-left: 15px;margin-top: 20px;background: #f8f9fa;">
   
-    <div class="col-xs-12">
+    <div class="col-xs-12" style="padding-top: 30px;">
       <!-- PAGE CONTENT BEGINS -->
-      <p-panel header="Tìm kiếm" [style]="{'margin-top': '2px'}">
+      <p-panel header="Tìm kiếm" [style]="{'margin-top': '2px'}"
+      >
         <form class="form-horizontal" role="form" [formGroup]="formsearch"  (ngSubmit)="search()">
           <div class="form-group">
             <label class="col-sm-1 control-label no-padding-right"> Tài khoản </label>
@@ -40,15 +37,16 @@
           </div>
         </form> 
       </p-panel>
-      <p-table selectionMode="single" [value]="users" styleClass="p-datatable-gridlines">
+      <h3 style="margin-top: 50px;">Danh sách người dùng</h3>
+      <p-table selectionMode="single" [value]="users" styleClass="p-datatable-gridlines" >
         <ng-template pTemplate="header">
           <tr>
-            <th style="width: 70px; text-align: center;">STT</th>
-            <th style="width: 15%; text-align: left;">Tài khoản</th>
-            <th style="width: 20%; text-align: left;">Họ tên</th>
-            <th style="text-align: left;">Địa chỉ</th>
-            <th style="width: 130px; text-align: left;">Loại quyền</th>
-            <th style="width: 120px; text-align: left;">Tác vụ</th>
+            <th style="width: 70px; text-align: center;background: #343a40;color: white;">STT</th>
+            <th style="width: 15%; text-align: left;background: #343a40;color: white;">Tài khoản</th>
+            <th style="width: 20%; text-align: left;background: #343a40;color: white;">Họ tên</th>
+            <th style="text-align: left;background: #343a40;color: white;">Địa chỉ</th>
+            <th style="width: 130px; text-align: left;background: #343a40;color: white;">Loại quyền</th>
+            <th style="width: 120px; text-align: left;background: #343a40;color: white;">Tác vụ</th>
           </tr>
         </ng-template>
         <ng-template pTemplate="body" let-item  let-i="rowIndex">
@@ -61,10 +59,10 @@
             <td class="action-col" >
               <div class="btn-group">
                 <button title="" class="btn btn-xs btn-white btn-default"  (click)="openUpdateModal(item)">  
-                  <i class="ace-icon fa fa-edit"></i>
+                  <i class="ace-icon fa fa-edit" style="color:rgb(40, 82, 218);"></i>
                 </button>
                 <button title="" class="btn btn-xs btn-white btn-default" (click)="onDelete(item)">
-                  <i class="ace-icon fa fa-trash"></i>
+                  <i class="ace-icon fa fa-trash" style="color: red;"></i>
                 </button>
               </div>  
             </td>
