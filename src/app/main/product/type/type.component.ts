@@ -64,10 +64,10 @@ export class TypeComponent extends BaseComponent implements OnInit {
     if(this.isCreate) { 
       this.getEncodeFromImage(this.file_image).subscribe((data: any): void => {
         let tmp = {
-          parent_item_group_id:1,
+          parent_item_group_id:value.parent_item_group_id,
           item_group_name:value.item_group_name,
-          seq_num:1,
-          url:"",  
+          seq_num:+value.seq_num,
+          url:value.url,  
           };
         this._api.post('/api/itemgroupAdmin/create-itemgroup',tmp).takeUntil(this.unsubscribe).subscribe(res => {
           alert('Thêm thành công');

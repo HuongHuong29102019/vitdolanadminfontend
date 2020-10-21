@@ -69,15 +69,17 @@ export class ProductComponent extends BaseComponent implements OnInit {
       this.getEncodeFromImage(this.file_image).subscribe((data: any): void => {
         let data_image = data == '' ? null : data;
         let tmp = {
-          item_image:data_image,
+           item_image:data_image,
+           item_group_id:value.item_group_id,
            item_name:value.item_name,
-           item_price:value.item_price,
+           item_price:+value.item_price,
            item_color:value.item_color,
            item_material:value.item_material,
            item_width:value.item_width,
            item_height:value.item_height,
            item_depth:value.item_depth 
           };
+          //debugger;
         this._api.post('/api/itemAdmin/create-item',tmp).takeUntil(this.unsubscribe).subscribe(res => {
           alert('Thêm thành công');
           this.search();
