@@ -36,9 +36,9 @@ export const mainRoutes: Routes = [
         data: { roles: [Role.Admin] },
       },
       {
-        path: 'product',
+        path: 'phieuthu',
         loadChildren: () =>
-          import('./product/product.module').then((m) => m.ProductModule),
+          import('./phieuthu/phieuthu.module').then((m) => m.PhieuThuModule),
         canActivate: [RoleGuard],
         data: { roles: [Role.Admin, Role.User] },
       },

@@ -6,19 +6,25 @@ import { ActivatedRoute } from '@angular/router';
 import { Injector } from '@angular/core';
 export class BaseComponent {
    public genders: any;
+   public hddt: any;
    public roles: any;
    public locale_vn:any;
    public today: any;
    public dateFormat: any;
    public unsubscribe = new Subject();
    public _api: ApiService;
-   public _route: ActivatedRoute;
+   public _route: ActivatedRoute;  
    constructor(injector: Injector) { 
           this.today = new Date();
           this.dateFormat = "dd/mm/yy";
           this.genders =  [
             {label:'Nam',value:'Nam'},
             {label:'Nữ',value:'Nữ'},
+            {label:'Khác',value:'Khác'}
+          ];   
+          this.hddt =  [
+            {label:'Yes',value:'1'},
+            {label:'No',value:'0'},
             {label:'Khác',value:'Khác'}
           ];   
           this.roles =  [

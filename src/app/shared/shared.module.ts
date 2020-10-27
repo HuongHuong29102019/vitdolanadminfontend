@@ -10,6 +10,7 @@ import {FileUploadModule} from 'primeng/fileupload';
 import { UnauthorizedComponent } from './unauthorized/unauthorized.component';
 import { FileNotFoundComponent } from './file-not-found/file-not-found.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {EditorModule} from 'primeng/editor';
 import {MultiSelectModule} from 'primeng/multiselect';
 @NgModule({
   declarations: [UnauthorizedComponent, FileNotFoundComponent],
@@ -24,7 +25,8 @@ import {MultiSelectModule} from 'primeng/multiselect';
     FileUploadModule,
     ReactiveFormsModule,
     MultiSelectModule,
-    NgbModule
+    NgbModule,
+    EditorModule
   ],
   exports: [
     ReactiveFormsModule,
@@ -36,7 +38,8 @@ import {MultiSelectModule} from 'primeng/multiselect';
     CalendarModule,
     DropdownModule,
     FileUploadModule,
-    NgbModule 
+    NgbModule,
+    EditorModule
   ],
 })
 export class SharedModule { }
