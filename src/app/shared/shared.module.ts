@@ -12,6 +12,7 @@ import { FileNotFoundComponent } from './file-not-found/file-not-found.component
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {EditorModule} from 'primeng/editor';
 import {MultiSelectModule} from 'primeng/multiselect';
+import {InputSwitchModule} from 'primeng/inputswitch';
 @NgModule({
   declarations: [UnauthorizedComponent, FileNotFoundComponent],
   imports: [
@@ -26,7 +27,8 @@ import {MultiSelectModule} from 'primeng/multiselect';
     ReactiveFormsModule,
     MultiSelectModule,
     NgbModule,
-    EditorModule
+    EditorModule,
+    InputSwitchModule
   ],
   exports: [
     ReactiveFormsModule,
@@ -39,7 +41,8 @@ import {MultiSelectModule} from 'primeng/multiselect';
     DropdownModule,
     FileUploadModule,
     NgbModule,
-    EditorModule
+    EditorModule,
+    InputSwitchModule
   ],
 })
 export class SharedModule { }

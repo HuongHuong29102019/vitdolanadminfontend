@@ -6,8 +6,12 @@ import { ActivatedRoute } from '@angular/router';
 import { Injector } from '@angular/core';
 export class BaseComponent {
    public genders: any;
+   public genders1: any;
+   public he: any;
+   public trinhdo: any;
    public hddt: any;
    public roles: any;
+   public roles1: any;
    public locale_vn:any;
    public today: any;
    public dateFormat: any;
@@ -21,7 +25,11 @@ export class BaseComponent {
             {label:'Nam',value:'Nam'},
             {label:'Nữ',value:'Nữ'},
             {label:'Khác',value:'Khác'}
-          ];   
+          ];  
+          this.genders1 =  [
+            {label:'Nam',value:'0'},
+            {label:'Nữ',value:'1'}
+          ];  
           this.hddt =  [
             {label:'Yes',value:'1'},
             {label:'No',value:'0'},
@@ -30,6 +38,21 @@ export class BaseComponent {
           this.roles =  [
             {label:'Admin',value:'Admin'},
             {label:'User',value:'User'}
+          ];  
+          this.roles1 =  [
+            {label:'Người quản trị',value:'0'},
+            {label:'Người quản lý',value:'1'},
+            {label:'Giáo viên',value:'2'},
+            {label:'Sinh viên',value:'3'}
+          ];  
+          this.trinhdo =  [
+            {label:'Tiến sĩ',value:'0'},
+            {label:'Thạc sĩ',value:'2'},
+            {label:'Sinh viên',value:'1'}
+          ];   
+          this.he =  [
+            {label:'Cao đẳng',value:'0'},
+            {label:'Chính quy',value:'1'}
           ];   
           this.locale_vn={
             "firstDayOfWeek": 1,

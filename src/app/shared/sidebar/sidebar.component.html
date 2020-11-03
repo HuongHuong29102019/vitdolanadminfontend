@@ -1,47 +1,50 @@
-<div id="sidebar" class="sidebar responsive ace-save-state sidebar-fixed" data-sidebar="true" data-sidebar-scroll="true"
-  data-sidebar-hover="true" style="width:270px">
-    <ul class="nav nav-list">
-      <li class="" style="height: 70px;">
-        <a>
-         <img src="assets/images/huong.jpg" style="width: 40px;height: 40px;border-radius: 50%">
-          <span class="menu-text"> Mrs Huong </span>
-        </a>
+<!-- Main Sidebar Container -->
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+  <!-- Brand Logo -->
+  <a routerLink="/" class="brand-link">
+    <img src="assets/admin-lte/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+         style="opacity: .8">
+    <span class="brand-text font-weight-light" style="font-size: 20px;">UTEHY</span>
+  </a>
 
-        <b class="arrow"></b>
-      </li> 
-      <li class="">
-        <a routerLink="/">
-          <i class="menu-icon fa fa-tachometer"></i>
-          <span class="menu-text"> Trang chủ </span>
-        </a>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <!-- Sidebar user panel (optional) -->
+    <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+      <div class="image">
+        <img src="assets/admin-lte/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+      </div>
+      <div class="info">
+        <a href="#" class="d-block">Ms Huong</a>
+      </div>
+    </div>
 
-        <b class="arrow"></b>
-      </li> 
-      <ng-container *ngFor="let mn of menus">
-        <li class="">
-          <a href="#" class="dropdown-toggle">
-            <i class="menu-icon fa fa-{{mn.icon}}"></i>
-            <span class="menu-text"> {{mn.name}} </span>
-            <b class="arrow fa fa-angle-down"></b>
+    <!-- Sidebar Menu -->
+    <nav class="mt-2">
+      <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+        <ng-container *ngFor="let mn of menus">
+        <li class="nav-item">
+          <a  class="nav-link">
+            <i class="nav-icon fas fa-{{mn.icon}}"></i>
+            <p>
+              {{mn.name}}
+            </p>
           </a>
-          <b class="arrow"></b>
-          <ul class="submenu">
-            <ng-container  *ngFor="let m of mn.childs" >
-              <li class="">
-                <a routerLink ="{{m.url}}">
-                  <i class="menu-icon fa fa-caret-right"></i>
-                   {{m.name}}
-                </a> 
-                <b class="arrow"></b>
-              </li>
-            </ng-container> 
+          <ul class="nav nav-treeview" style="display: none;">   
+            <ng-container  *ngFor="let m of mn.childs" >   
+            <li class="nav-item">
+              <a routerLink ="{{m.url}}" class="nav-link ">
+                <i class="far fa-circle nav-icon"></i>
+                <p> {{m.name}}</p>
+              </a>
+            </li>
+            </ng-container>
           </ul>
         </li> 
-      </ng-container>
-     
-    </ul><!-- /.nav-list -->
-
-    <!-- <div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
-      <i class="ace-icon fa fa-angle-double-left" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i>
-    </div>  -->
+        </ng-container>
+      </ul>
+    </nav>
+    <!-- /.sidebar-menu -->
   </div>
+  <!-- /.sidebar -->
+</aside>

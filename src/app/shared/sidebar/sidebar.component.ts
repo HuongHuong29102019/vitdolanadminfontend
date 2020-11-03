@@ -1,50 +1,23 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 declare let $: any;
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.css']
 })
-export class SidebarComponent implements OnInit, AfterViewInit {
+export class SidebarComponent implements OnInit {
   public menus = [
-  {name :'Người dùng', url:'',icon:'user',childs:[{name:'Quản lý người dùng',url:'user/user'},{name:'Đăng xuất', url:''},{name:'Đăng nhập', url:'/login'}]},
-  {name:'Phiếu thu',url:'',icon:'signal',childs:[{name:'Quản lý phiếu thu',url:'/phieuthu/phieuthu'}]}];
+  {name :'Người dùng', url:'',icon:'user',childs:[{name:'Quản lý người dùng',url:'user/user'},
+  {name:'Đăng xuất', url:'/login'},
+  {name:'Đăng nhập', url:'/login'}]},
+  {name:'Phiếu thu',url:'',icon:'signal',childs:[{name:'Quản lý phiếu thu',url:'/phieuthu/phieuthu'},
+  {name:'Quản lý lớp học',url:'/phieuthu/lophoc'},
+  {name:'Quản lý sinh viên',url:'/phieuthu/sinhvien'},
+  {name:'Quản lý cán bộ giảng viên',url:'/phieuthu/canbogiangvien'},
+  {name:'Quản lý khoản thu',url:'/phieuthu/khoanthu'},
+  {name:'Quản lý ngân hàng',url:'/phieuthu/nganhang'}
+  ]}];
   constructor() { } 
   ngOnInit(): void {
-  }
-  ngAfterViewInit() {
-    $('#sidebar-collapse').click(function () {
-      setTimeout(() => {
-        let event;
-        if (typeof (Event) === 'function') {
-          event = new Event('resize');
-        } else {
-          event = document.createEvent('Event');
-          event.initEvent('resize', true, true);
-        }
-        window.dispatchEvent(event);
-      }, 100);
-      if (!$('#sidebar').hasClass('menu-min')) {
-        $('.main-content').css('padding-left', '43px');
-        $('.footer-inner').css('left', '43px');
-      } else {
-        $('.main-content').css('padding-left', '190px');
-        $('.footer-inner').css('left', '190px');
-      }
-    });
-    setTimeout(() => {
-      let event;
-      if (typeof (Event) === 'function') {
-        event = new Event('resize');
-      } else {
-        event = document.createEvent('Event');
-        event.initEvent('resize', true, true);
-      }
-      window.dispatchEvent(event);
-    }, 100);
-    setTimeout(() => {
-      $('.main-content').css('padding-left', $('#sidebar').width() + 1);
-      $('.footer-inner').css('left', $('#sidebar').width() + 1);
-    }, 100);
   }
 }
